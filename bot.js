@@ -15,6 +15,8 @@ client.on('ready', () => {
         }, 1*70000);
 });
 client.on ("message", async message => {
+	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	const command = args.shift().toLowerCase();
  if (command === "ban") {
 		 	if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("<a:non:576666508571312138>Tu ne peux pas executer la commande demandée");	
 
