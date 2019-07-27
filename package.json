@@ -1,9 +1,10 @@
+  
 {
   "name": "spaceboat",
   "version": "0.0.6",
-  "main": "node bot2.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node bot2.js",
+    "start": "node bot.js",
     "background": "screen -dmS SpaceBoat nodemon bot.js"
   },
   "author": "Votyn",
