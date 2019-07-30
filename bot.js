@@ -43,8 +43,8 @@ client.on ("message", async message => {
    var reason = msg;
     if (!reason || reason < 250 ) return message.channel.send("***Vous n'avez pas mis de raison ou vous en avez mise une trop longue !!***")
 
-    let member = message.mentions.members.first () || message.mentions.id.first ();
-    let member2 = message.mentions.users.first () || message.mentions.id.first ();
+    let member = message.mentions.members.first ();
+    let member2 = message.mentions.users.first ();
    var embed = new Discord.RichEmbed()
    .setColor ("#f08619")
    .setTitle ("Vous venez de vous faire bannir :warning:")
@@ -59,7 +59,6 @@ client.on ("message", async message => {
     member.send ({embed})
    
 message.channel.send ("```diff\nL'utilisateurs "+member2.username +"#"+ member2.discriminator +"\ Viens de ce faire kick pour la raison ci-dessous :\n``` ``\n\n"+ reason + " 🔨 ``")
-   member2.ban ();
    member.ban();
      
   }
@@ -175,10 +174,10 @@ const embed = new Discord.RichEmbed()
 .addField ("Standardiste","<@296666355850149891>\n<@346655035800944650>\n<@377841145532645381>")
 .addField ("DJ","<@325253154260385802>\n<@378692219206631434>")
 .addField ("Responsable Managers","<@345951306055417857>")
-.addField ("Managers","<@210778186760454144>\n<@353659999098109952>")
+.addField ("Managers","<@210778186760454144>\n<@353659999098109952>\n<@387306880529334274>")
 .addField ("Responsable Modérateurs","<@547091548702244910>")
 .addField ("Modérateur","<@494879851128553474>")
-.addField ("Technicien","<@234250513875599370>\n<@403591962298679327>");
+.addField ("Technicien","<@403591962298679327>");
 message.channel.send ({embed})
 }
   
