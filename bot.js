@@ -111,14 +111,20 @@ message.channel.send ("```diff\nL'utilisateurs "+member2.username +"#"+ member2.
 	}
   var fly = [
     "discord.gg",
+    //"ect..."
+    ];
+  if (!message.author.id === "423882332660039690") {
+  //var fly = [
+    //"discord.gg",
     
       //"ect..."
-      ];
+     // ];
   if (fly.some (x => message.content.toLowerCase().includes(fly))) {
     message.reply (":x: Faire de la publicité vous oppose au règlement ! ")
     message.delete(message.author)
   }
-  
+  } else {
+  }
 if (message.channel.id === "602899845291966475","602874414438023176") {
 if (message.content.startsWith (prefix + "help")) {
   
